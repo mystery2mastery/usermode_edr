@@ -1,2 +1,2 @@
 # usermode_edr
-A poc (proof-of-concept) EDR implemented completely in user-mode. It utilizes LdrRegisterDllNotification() to look for dll loads and utilizes my custom hooking engine to place hooks in the target dlls.
+A poc (proof-of-concept) EDR implemented completely in user-mode. It utilizes LdrRegisterDllNotification() to look for dll loads and utilizes my custom hooking engine to place hooks in the target dlls. On successful compilation, a .dll is obtained. This is the edr .dll that needs to be injected into a process before its execution. For demonstration purposes I created another project which use Early Bird process injection technique (uses QueueUserAPC() api) to queue the loading of this .dll.
